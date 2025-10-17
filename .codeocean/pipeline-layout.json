@@ -1,0 +1,50 @@
+{
+	"edges": [
+		{
+			"id": "xy-edge__capsule_benchmark_indicator_base_nwb_1-capsule_aind_fip_dff_2",
+			"source": "capsule_benchmark_indicator_base_nwb_1",
+			"target": "capsule_aind_fip_dff_2"
+		}
+	],
+	"nodes": [
+		{
+			"data": {
+				"capsule_id": "a0595630-e497-4ffe-86e7-ba2943e55284"
+			},
+			"id": "capsule_benchmark_indicator_base_nwb_1",
+			"position": {
+				"x": 1348.4444173177083,
+				"y": 541.7777709960938
+			},
+			"selected": true,
+			"type": "capsule"
+		},
+		{
+			"id": "results",
+			"position": {
+				"x": 1016.4444173177085,
+				"y": 1245.7777709960938
+			},
+			"selected": false,
+			"type": "results"
+		},
+		{
+			"data": {
+				"capsule_id": "b0b2a4ac-8876-4768-8d54-2dd85815acf7"
+			},
+			"id": "capsule_aind_fip_dff_2",
+			"position": {
+				"x": 1003.111083984375,
+				"y": 936.4444376627604
+			},
+			"selected": false,
+			"type": "capsule"
+		}
+	],
+	"timestamp": 1760745074519,
+	"viewport": {
+		"x": 0,
+		"y": 0,
+		"zoom": 0.75
+	}
+}

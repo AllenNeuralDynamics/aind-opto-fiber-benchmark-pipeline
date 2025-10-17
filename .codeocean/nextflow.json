@@ -1,0 +1,39 @@
+{
+	"version": 2,
+	"processes": [
+		{
+			"name": "capsule_benchmark_indicator_base_nwb_1",
+			"capsule": {
+				"id": "a0595630-e497-4ffe-86e7-ba2943e55284",
+				"name": "benchmark-indicator-base-nwb",
+				"slug": "5997344"
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			}
+		},
+		{
+			"name": "capsule_aind_fip_dff_2",
+			"capsule": {
+				"id": "b0b2a4ac-8876-4768-8d54-2dd85815acf7",
+				"name": "aind-fip-dff",
+				"slug": "9752775"
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "ARfQgWfJN0FC9jbt",
+					"source_id": "capsule_benchmark_indicator_base_nwb_1",
+					"type": "capsule",
+					"name": "benchmark-indicator-base-nwb",
+					"target_path": "nwb",
+					"collect": true
+				}
+			]
+		}
+	]
+}
