@@ -78,13 +78,14 @@ acquisition
 ```
 
 ### Dff Processing
-This [capsule](https://codeocean.allenneuraldynamics.org/capsule/1001867/tree) runs processing on the `acquisition` container of the NWB that gets output from the base capsule. 
+This [capsule](https://codeocean.allenneuraldynamics.org/capsule/1001867/tree) runs processing on the `acquisition` container of the NWB that gets output from the base capsule.
 
-See [readme](https://github.com/AllenNeuralDynamics/aind-fip-dff) for in depth details.
+After processing, the NWB is updated to contain the processed data in the `processing` module. See [readme](https://github.com/AllenNeuralDynamics/aind-fip-dff) for in depth details.
 
 ### Output
 The pipeline outputs the following - NWB file with the metadata files. In the NWB, the relevant containers are the `acquisition`, `events`, and `processing` modules.
 
+```
 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S_processed_YYYY-MM-DD_HH-M-S
 ├── 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S.nwb
 │   ├── 📄 .zattrs
@@ -110,4 +111,5 @@ The pipeline outputs the following - NWB file with the metadata files. In the NW
 ├── 📄 rig.json
 ├── 📄 session.json
 └── 📄 subject.json
+```
 
