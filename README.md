@@ -126,22 +126,24 @@ The pipeline outputs the following - NWB file with the metadata files. In the NW
 
 ```
 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S_processed_YYYY-MM-DD_HH-M-S
-├── 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S.nwb
-│   ├── 📄 .zattrs
-│   ├── 📄 .zgroup
-│   ├── 📄 .zmetadata
-│   ├── 📂 acquisition
-│   ├── 📂 analysis
-│   ├── 📂 events
-│   ├── 📂 file_create_date
-│   ├── 📂 general
-│   ├── 📂 identifier
-│   ├── 📂 processing
-│   ├── 📂 session_description
-│   ├── 📂 session_start_time
-│   ├── 📂 specifications
-│   ├── 📂 stimulus
-│   └── 📂 timestamps_reference_time
+├── 📂 nwb
+|   ├── 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S.nwb
+│       ├── 📄 .zattrs
+│       ├── 📄 .zgroup
+│       ├── 📄 .zmetadata
+│       ├── 📂 acquisition
+│       ├── 📂 analysis
+│       ├── 📂 events
+│       ├── 📂 file_create_date
+│       ├── 📂 general
+│       ├── 📂 identifier
+│       ├── 📂 processing
+│       ├── 📂 session_description
+│       ├── 📂 session_start_time
+│       ├── 📂 specifications
+│       ├── 📂 stimulus
+│       └── 📂 timestamps_reference_time
+├── 📂 dff-qc
 ├── 📄 data_description.json
 ├── 📄 output
 ├── 📄 procedures.json
