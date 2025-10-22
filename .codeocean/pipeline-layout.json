@@ -1,20 +1,38 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__capsule_benchmark_indicator_base_nwb_1-capsule_aind_fip_dff_2",
-			"source": "capsule_benchmark_indicator_base_nwb_1",
+			"id": "xy-edge__capsule_aind_opto_fiber_benchmark_nwb_base_1-capsule_aind_fip_dff_2",
+			"selected": false,
+			"source": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
 			"target": "capsule_aind_fip_dff_2"
+		},
+		{
+			"id": "xy-edge__6d658d46-4323-4093-8533-a9e0d6a4c6ed-capsule_aind_opto_fiber_benchmark_nwb_base_1",
+			"selected": false,
+			"source": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+			"target": "capsule_aind_opto_fiber_benchmark_nwb_base_1"
+		},
+		{
+			"id": "xy-edge__6d658d46-4323-4093-8533-a9e0d6a4c6ed-capsule_aind_fip_dff_2",
+			"selected": false,
+			"source": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+			"target": "capsule_aind_fip_dff_2"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_dff_2-results",
+			"source": "capsule_aind_fip_dff_2",
+			"target": "results"
 		}
 	],
 	"nodes": [
 		{
 			"data": {
-				"capsule_id": "a0595630-e497-4ffe-86e7-ba2943e55284"
+				"capsule_id": "3878d9e7-25a1-4524-bb84-0ff451bee7bf"
 			},
-			"id": "capsule_benchmark_indicator_base_nwb_1",
+			"id": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
 			"position": {
-				"x": 1348.4444173177083,
-				"y": 541.7777709960938
+				"x": 1399.0808407233626,
+				"y": 473.8500918376453
 			},
 			"selected": true,
 			"type": "capsule"
@@ -22,29 +40,38 @@
 		{
 			"id": "results",
 			"position": {
-				"x": 1016.4444173177085,
-				"y": 1245.7777709960938
+				"x": 1130.0012877976558,
+				"y": 1197.41222201516
 			},
 			"selected": false,
 			"type": "results"
 		},
 		{
 			"data": {
-				"capsule_id": "b0b2a4ac-8876-4768-8d54-2dd85815acf7"
+				"capsule_id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e"
 			},
 			"id": "capsule_aind_fip_dff_2",
 			"position": {
-				"x": 1003.111083984375,
-				"y": 936.4444376627604
+				"x": 1137.572178604365,
+				"y": 855.5975205637602
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"id": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+			"position": {
+				"x": 1099.7036710435498,
+				"y": 122.65866454798103
+			},
+			"selected": false,
+			"type": "dataset"
 		}
 	],
-	"timestamp": 1760745074519,
+	"timestamp": 1761159395190,
 	"viewport": {
-		"x": 0,
-		"y": 0,
-		"zoom": 0.75
+		"x": -161.90849737621784,
+		"y": -24.07777443187433,
+		"zoom": 0.8186221743810549
 	}
 }

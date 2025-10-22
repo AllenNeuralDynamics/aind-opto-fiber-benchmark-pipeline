@@ -2,23 +2,11 @@
 	"version": 2,
 	"processes": [
 		{
-			"name": "capsule_benchmark_indicator_base_nwb_1",
+			"name": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
 			"capsule": {
-				"id": "a0595630-e497-4ffe-86e7-ba2943e55284",
-				"name": "benchmark-indicator-base-nwb",
-				"slug": "5997344"
-			},
-			"resources": {
-				"cpus": 1,
-				"memory": 8
-			}
-		},
-		{
-			"name": "capsule_aind_fip_dff_2",
-			"capsule": {
-				"id": "b0b2a4ac-8876-4768-8d54-2dd85815acf7",
-				"name": "aind-fip-dff",
-				"slug": "9752775"
+				"id": "3878d9e7-25a1-4524-bb84-0ff451bee7bf",
+				"name": "aind-opto-fiber-benchmark-nwb-base",
+				"slug": "4644449"
 			},
 			"resources": {
 				"cpus": 1,
@@ -26,14 +14,50 @@
 			},
 			"inputs": [
 				{
-					"id": "ARfQgWfJN0FC9jbt",
-					"source_id": "capsule_benchmark_indicator_base_nwb_1",
-					"type": "capsule",
-					"name": "benchmark-indicator-base-nwb",
-					"target_path": "nwb",
+					"id": "yGlOqfsfa63ERwYf",
+					"source_id": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+					"type": "dataset",
+					"name": "raw_data",
+					"source_path": "raw_data/",
+					"target_path": "raw_data",
 					"collect": true
 				}
 			]
+		},
+		{
+			"name": "capsule_aind_fip_dff_2",
+			"capsule": {
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"name": "aind-fip-dff",
+				"slug": "1001867",
+				"version": 13
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "wHpXTSQudKbBCvVX",
+					"source_id": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+					"type": "dataset",
+					"name": "raw_data",
+					"source_path": "raw_data/",
+					"target_path": "fiber_raw_data",
+					"collect": true
+				},
+				{
+					"id": "VDSlstPLO64I12IW",
+					"source_id": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
+					"type": "capsule",
+					"name": "aind-opto-fiber-benchmark-nwb-base",
+					"target_path": "nwb",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e"
+			}
 		}
 	]
 }

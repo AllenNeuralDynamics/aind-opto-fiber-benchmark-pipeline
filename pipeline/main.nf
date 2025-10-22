@@ -1,23 +1,26 @@
 #!/usr/bin/env nextflow
-// hash:sha256:a96766f827a90057eec3e3c84b8a2a561b45cd241a627f3d509d08f60ca4115d
+// hash:sha256:d2e3cbb1d35f90a6e02c76429d96613f5425cb875efe31975a652105932f1646
 
-// capsule - benchmark-indicator-base-nwb
-process capsule_benchmark_indicator_base_nwb_1 {
-	tag 'capsule-5997344'
-	container "$REGISTRY_HOST/capsule/a0595630-e497-4ffe-86e7-ba2943e55284"
+// capsule - aind-opto-fiber-benchmark-nwb-base
+process capsule_aind_opto_fiber_benchmark_nwb_base_1 {
+	tag 'capsule-4644449'
+	container "$REGISTRY_HOST/capsule/3878d9e7-25a1-4524-bb84-0ff451bee7bf"
 
 	cpus 1
 	memory '7.5 GB'
 
+	input:
+	path 'capsule/data/raw_data'
+
 	output:
-	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_2_1
+	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_2_3
 
 	script:
 	"""
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=a0595630-e497-4ffe-86e7-ba2943e55284
+	export CO_CAPSULE_ID=3878d9e7-25a1-4524-bb84-0ff451bee7bf
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -28,9 +31,9 @@ process capsule_benchmark_indicator_base_nwb_1 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5997344.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4644449.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5997344.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4644449.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -46,21 +49,27 @@ process capsule_benchmark_indicator_base_nwb_1 {
 
 // capsule - aind-fip-dff
 process capsule_aind_fip_dff_2 {
-	tag 'capsule-9752775'
-	container "$REGISTRY_HOST/capsule/b0b2a4ac-8876-4768-8d54-2dd85815acf7"
+	tag 'capsule-1001867'
+	container "$REGISTRY_HOST/published/603a2149-6281-4a7b-bbd6-ff50ca0e064e:v13"
 
 	cpus 1
 	memory '7.5 GB'
 
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+
 	input:
+	path 'capsule/data/fiber_raw_data'
 	path 'capsule/data/nwb/'
+
+	output:
+	path 'capsule/results/*'
 
 	script:
 	"""
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=b0b2a4ac-8876-4768-8d54-2dd85815acf7
+	export CO_CAPSULE_ID=603a2149-6281-4a7b-bbd6-ff50ca0e064e
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -71,9 +80,9 @@ process capsule_aind_fip_dff_2 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9752775.git" capsule-repo
+		git clone --filter=tree:0 --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9752775.git" capsule-repo
+		git clone --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -87,8 +96,14 @@ process capsule_aind_fip_dff_2 {
 	"""
 }
 
+params.raw_data_url = 's3://aind-open-data/behavior_809491_2025-10-21_09-37-59'
+
 workflow {
+	// input data
+	raw_data_to_aind_opto_fiber_benchmark_nwb_base_1 = Channel.fromPath(params.raw_data_url + "/", type: 'any')
+	raw_data_to_aind_fip_dff_2 = Channel.fromPath(params.raw_data_url + "/", type: 'any')
+
 	// run processes
-	capsule_benchmark_indicator_base_nwb_1()
-	capsule_aind_fip_dff_2(capsule_benchmark_indicator_base_nwb_1.out.to_capsule_aind_fip_dff_2_1.collect())
+	capsule_aind_opto_fiber_benchmark_nwb_base_1(raw_data_to_aind_opto_fiber_benchmark_nwb_base_1.collect())
+	capsule_aind_fip_dff_2(raw_data_to_aind_fip_dff_2.collect(), capsule_aind_opto_fiber_benchmark_nwb_base_1.out.to_capsule_aind_fip_dff_2_3.collect())
 }
