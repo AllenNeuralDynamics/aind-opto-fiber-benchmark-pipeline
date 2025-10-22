@@ -82,6 +82,45 @@ This [capsule](https://codeocean.allenneuraldynamics.org/capsule/1001867/tree) r
 
 After processing, the NWB is updated to contain the processed data in the `processing` module. See [readme](https://github.com/AllenNeuralDynamics/aind-fip-dff) for in depth details.
 
+Sample output structure shown below for the `processing` module in the NWB
+
+```
+processing/
+└── fiber_photometry/
+    ├── Iso_0_dff-bright
+    ├── Iso_0_dff-bright_mc-iso-IRLS
+    ├── Iso_0_dff-exp
+    ├── Iso_0_dff-exp_mc-iso-IRLS
+    ├── Iso_0_dff-poly
+    ├── Iso_0_dff-poly_mc-iso-IRLS
+    ├── Iso_1_dff-bright
+    ├── Iso_1_dff-bright_mc-iso-IRLS
+    ├── Iso_1_dff-exp
+    ├── Iso_1_dff-exp_mc-iso-IRLS
+    ├── Iso_1_dff-poly
+    ├── Iso_1_dff-poly_mc-iso-IRLS
+    ├── Iso_2_dff-bright
+    ├── Iso_2_dff-bright_mc-iso-IRLS
+    ├── Iso_2_dff-exp
+    ├── Iso_2_dff-exp_mc-iso-IRLS
+    ├── Iso_2_dff-poly
+    ├── Iso_2_dff-poly_mc-iso-IRLS
+    ├── Iso_3_dff-bright
+    ├── Iso_3_dff-bright_mc-iso-IRLS
+    ├── Iso_3_dff-exp
+    ├── Iso_3_dff-exp_mc-iso-IRLS
+    ├── Iso_3_dff-poly
+    ├── Iso_3_dff-poly_mc-iso-IRLS
+    ├── Iso_4_dff-bright
+    ├── Iso_4_dff-bright_mc-iso-IRLS
+    ├── Iso_4_dff-exp
+    ├── Iso_4_dff-exp_mc-iso-IRLS
+    ├── Iso_4_dff-poly
+    ├── Iso_4_dff-poly_mc-iso-IRLS
+```
+
+This is repeated for the `Signal` channel across the various processing methods
+
 ### Output
 The pipeline outputs the following - NWB file with the metadata files. In the NWB, the relevant containers are the `acquisition`, `events`, and `processing` modules.
 
