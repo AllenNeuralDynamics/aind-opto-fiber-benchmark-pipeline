@@ -53,27 +53,27 @@ acquisition
 ```
 
 ```
-| timestamp   | event               |
-|--------------|---------------------|
-| 6.425597e+07 | OptoStimLaser_onset |
+| timestamp    | event                |
+|--------------|--------------------- |
+| 6.425597e+07 | OptoStimLaser_onset  |
 | 6.425797e+07 | OptoStimLaser_offset |
-| 6.428597e+07 | OptoStimLaser_onset |
+| 6.428597e+07 | OptoStimLaser_onset  |
 | 6.428797e+07 | OptoStimLaser_offset |
-| 6.431598e+07 | OptoStimLaser_onset |
+| 6.431598e+07 | OptoStimLaser_onset  |
 | 6.431798e+07 | OptoStimLaser_offset |
-| 6.434598e+07 | OptoStimLaser_onset |
+| 6.434598e+07 | OptoStimLaser_onset  |
 | 6.434798e+07 | OptoStimLaser_offset |
-| 6.437598e+07 | OptoStimLaser_onset |
+| 6.437598e+07 | OptoStimLaser_onset  |
 | 6.437798e+07 | OptoStimLaser_offset |
-| 6.440599e+07 | OptoStimLaser_onset |
+| 6.440599e+07 | OptoStimLaser_onset  |
 | 6.440799e+07 | OptoStimLaser_offset |
-| 6.443598e+07 | OptoStimLaser_onset |
+| 6.443598e+07 | OptoStimLaser_onset  |
 | 6.443799e+07 | OptoStimLaser_offset |
-| 6.446599e+07 | OptoStimLaser_onset |
+| 6.446599e+07 | OptoStimLaser_onset  |
 | 6.446799e+07 | OptoStimLaser_offset |
-| 6.449600e+07 | OptoStimLaser_onset |
+| 6.449600e+07 | OptoStimLaser_onset  |
 | 6.449800e+07 | OptoStimLaser_offset |
-| 6.452600e+07 | OptoStimLaser_onset |
+| 6.452600e+07 | OptoStimLaser_onset  |
 | 6.452800e+07 | OptoStimLaser_offset |
 ```
 
