@@ -1,6 +1,6 @@
 # aind-opto-fiber-benchmark-pipeline
 
-This [pipeline](https://codeocean.allenneuraldynamics.org/capsule/2735201/tree) processes data from the opto fiber benchmark acquisition [acquisition-link](https://github.com/AllenNeuralDynamics/FIP_DAQ_Control_IndicatorBenchmarking).
+This [pipeline](https://codeocean.allenneuraldynamics.org/capsule/2735201/tree) processes data from the opto fiber benchmark [acquisition](https://github.com/AllenNeuralDynamics/FIP_DAQ_Control_IndicatorBenchmarking).
 
 The pipeline ingests the raw data and packages it to a NWB file, running preprocessing also. Details are found below:
 
@@ -25,6 +25,8 @@ This pipeline specifically deals with the `session.json` and the `fib` folder. U
   - `Signal.csv`
   - `Iso.csv`
   - `Stim.csv`
+
+The session json contains optogenetics stimulus information. See readme link in next section for more details.
 
 ### Opto-Fiber-Base-NWB Capsule 
 This [capsule](https://codeocean.allenneuraldynamics.org/capsule/4644449/tree) packages the raw data into a NWB file. The relevant containers for this NWB are the `acquisition` and `events` containers. See the [repo](https://github.com/AllenNeuralDynamics/aind-opto-fiber-benchmark-nwb-base-capsule) for more details.
@@ -76,3 +78,36 @@ acquisition
 ```
 
 ### Dff Processing
+This [capsule](https://codeocean.allenneuraldynamics.org/capsule/1001867/tree) runs processing on the `acquisition` container of the NWB that gets output from the base capsule. 
+
+See [readme](https://github.com/AllenNeuralDynamics/aind-fip-dff) for in depth details.
+
+### Output
+The pipeline outputs the following - NWB file with the metadata files. In the NWB, the relevant containers are the `acquisition`, `events`, and `processing` modules.
+
+📂 behavior_subjectID_YYYY-MM-DD_HH-M-S_processed_YYYY-MM-DD_HH-M-S
+├── 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S.nwb
+│   ├── 📄 .zattrs
+│   ├── 📄 .zgroup
+│   ├── 📄 .zmetadata
+│   ├── 📂 acquisition
+│   ├── 📂 analysis
+│   ├── 📂 events
+│   ├── 📂 file_create_date
+│   ├── 📂 general
+│   ├── 📂 identifier
+│   ├── 📂 processing
+│   ├── 📂 session_description
+│   ├── 📂 session_start_time
+│   ├── 📂 specifications
+│   ├── 📂 stimulus
+│   └── 📂 timestamps_reference_time
+├── 📄 data_description.json
+├── 📄 output
+├── 📄 procedures.json
+├── 📄 processing.json
+├── 📄 quality_control.json
+├── 📄 rig.json
+├── 📄 session.json
+└── 📄 subject.json
+
