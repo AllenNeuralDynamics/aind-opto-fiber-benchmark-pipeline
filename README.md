@@ -29,7 +29,7 @@ This pipeline specifically deals with the `session.json` and the `fib` folder. U
 The session json contains optogenetics stimulus information. See readme link in next section for more details.
 
 ### Opto-Fiber-Base-NWB Capsule 
-This [capsule](https://codeocean.allenneuraldynamics.org/capsule/4644449/tree) packages the raw data into a NWB file. The relevant containers for this NWB are the `acquisition` and `events` containers. See the [repo](https://github.com/AllenNeuralDynamics/aind-opto-fiber-benchmark-nwb-base-capsule) for more details.
+This [capsule](https://github.com/AllenNeuralDynamics/aind-opto-fiber-benchmark-nwb-base-capsule) packages the raw data into a NWB file. The relevant containers for this NWB are the `acquisition` and `events` containers. See the repository link for more details.
 
 The output of this capsule is shown below for the relevant containers - `acquisition` and `events`:
 
@@ -78,9 +78,9 @@ acquisition
 ```
 
 ### Dff Processing
-This [capsule](https://codeocean.allenneuraldynamics.org/capsule/1001867/tree) runs processing on the `acquisition` container of the NWB that gets output from the base capsule.
+This [capsule](https://github.com/AllenNeuralDynamics/aind-fip-dff) runs processing on the `acquisition` container of the NWB that gets output from the base capsule.
 
-After processing, the NWB is updated to contain the processed data in the `processing` module. See [readme](https://github.com/AllenNeuralDynamics/aind-fip-dff) for in depth details.
+After processing, the NWB is updated to contain the processed data in the `processing` module. See repository link for in depth details.
 
 Sample output structure shown below for the `processing` module in the NWB
 
