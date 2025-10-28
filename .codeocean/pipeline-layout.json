@@ -27,12 +27,12 @@
 	"nodes": [
 		{
 			"data": {
-				"capsule_id": "3878d9e7-25a1-4524-bb84-0ff451bee7bf"
+				"capsule_id": "cc2de901-6fcd-47bf-9160-cb413b109dc5"
 			},
 			"id": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
 			"position": {
-				"x": 1399.0808407233626,
-				"y": 473.8500918376453
+				"x": 706.4315358390343,
+				"y": 492.2288461961018
 			},
 			"selected": true,
 			"type": "capsule"
@@ -68,10 +68,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1761159395190,
+	"timestamp": 1761611935816,
 	"viewport": {
-		"x": -161.90849737621784,
-		"y": -24.07777443187433,
-		"zoom": 0.8186221743810549
+		"x": -222.1238774621845,
+		"y": -4.783005773440209,
+		"zoom": 0.8705704253911009
 	}
 }

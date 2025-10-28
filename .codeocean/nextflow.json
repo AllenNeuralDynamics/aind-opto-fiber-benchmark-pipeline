@@ -4,9 +4,10 @@
 		{
 			"name": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
 			"capsule": {
-				"id": "3878d9e7-25a1-4524-bb84-0ff451bee7bf",
+				"id": "cc2de901-6fcd-47bf-9160-cb413b109dc5",
 				"name": "aind-opto-fiber-benchmark-nwb-base",
-				"slug": "4644449"
+				"slug": "9866173",
+				"version": 1
 			},
 			"resources": {
 				"cpus": 1,
