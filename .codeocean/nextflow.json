@@ -1,0 +1,64 @@
+{
+	"version": 2,
+	"processes": [
+		{
+			"name": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
+			"capsule": {
+				"id": "cc2de901-6fcd-47bf-9160-cb413b109dc5",
+				"name": "aind-opto-fiber-benchmark-nwb-base",
+				"slug": "9866173",
+				"version": 1
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "yGlOqfsfa63ERwYf",
+					"source_id": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+					"type": "dataset",
+					"name": "raw_data",
+					"source_path": "raw_data/",
+					"target_path": "raw_data",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_aind_fip_dff_2",
+			"capsule": {
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"name": "aind-fip-dff",
+				"slug": "1001867",
+				"version": 13
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "wHpXTSQudKbBCvVX",
+					"source_id": "6d658d46-4323-4093-8533-a9e0d6a4c6ed",
+					"type": "dataset",
+					"name": "raw_data",
+					"source_path": "raw_data/",
+					"target_path": "fiber_raw_data",
+					"collect": true
+				},
+				{
+					"id": "VDSlstPLO64I12IW",
+					"source_id": "capsule_aind_opto_fiber_benchmark_nwb_base_1",
+					"type": "capsule",
+					"name": "aind-opto-fiber-benchmark-nwb-base",
+					"target_path": "nwb",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e"
+			}
+		}
+	]
+}
