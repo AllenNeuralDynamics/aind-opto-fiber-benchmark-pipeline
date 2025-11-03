@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:7a95bda0685f235bbc203da67cf682ce086eea198ed369ce90b9b943d9a38f26
+// hash:sha256:3496c6b9d193132b12ef5ac0b77254de9049fa4bc7d3f4ebb490b9b430a0893b
 
 // capsule - aind-opto-fiber-benchmark-nwb-base
 process capsule_aind_opto_fiber_benchmark_nwb_base_1 {
 	tag 'capsule-9866173'
-	container "$REGISTRY_HOST/published/cc2de901-6fcd-47bf-9160-cb413b109dc5:v1"
+	container "$REGISTRY_HOST/published/cc2de901-6fcd-47bf-9160-cb413b109dc5:v2"
 
 	cpus 1
 	memory '7.5 GB'
@@ -31,9 +31,9 @@ process capsule_aind_opto_fiber_benchmark_nwb_base_1 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9866173.git" capsule-repo
+		git clone --filter=tree:0 --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9866173.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9866173.git" capsule-repo
+		git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9866173.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
