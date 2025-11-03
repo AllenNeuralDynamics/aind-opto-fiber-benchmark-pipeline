@@ -7,7 +7,7 @@
 				"id": "cc2de901-6fcd-47bf-9160-cb413b109dc5",
 				"name": "aind-opto-fiber-benchmark-nwb-base",
 				"slug": "9866173",
-				"version": 2
+				"version": 3
 			},
 			"resources": {
 				"cpus": 1,
