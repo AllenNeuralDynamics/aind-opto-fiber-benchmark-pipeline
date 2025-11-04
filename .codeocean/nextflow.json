@@ -57,7 +57,42 @@
 				}
 			],
 			"results": {
-				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e"
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"source_path": "nwb"
+			}
+		},
+		{
+			"name": "capsule_aind_generic_quality_control_evaluation_aggregator_3",
+			"capsule": {
+				"id": "03b3acfd-fdef-46b0-ad80-50e9d4e00827",
+				"name": "aind-generic-quality-control-evaluation-aggregator",
+				"slug": "5290719",
+				"version": 1
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "sTfjEtbTPIMDucSi",
+					"source_id": "capsule_aind_fip_dff_2",
+					"type": "capsule",
+					"name": "aind-fip-dff",
+					"source_path": "*.json",
+					"collect": true
+				},
+				{
+					"id": "QcTSWmUHvQhqaVt2",
+					"source_id": "capsule_aind_fip_dff_2",
+					"type": "capsule",
+					"name": "aind-fip-dff",
+					"source_path": "dff-qc",
+					"target_path": "dff-qc"
+				}
+			],
+			"results": {
+				"id": "03b3acfd-fdef-46b0-ad80-50e9d4e00827"
 			}
 		}
 	]

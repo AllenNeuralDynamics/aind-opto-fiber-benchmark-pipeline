@@ -20,7 +20,19 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_fip_dff_2-results",
+			"selected": false,
 			"source": "capsule_aind_fip_dff_2",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_dff_2-capsule_aind_generic_quality_control_evaluation_aggregator_3",
+			"selected": true,
+			"source": "capsule_aind_fip_dff_2",
+			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_3"
+		},
+		{
+			"id": "xy-edge__capsule_aind_generic_quality_control_evaluation_aggregator_3-results",
+			"source": "capsule_aind_generic_quality_control_evaluation_aggregator_3",
 			"target": "results"
 		}
 	],
@@ -34,7 +46,7 @@
 				"x": 706.4315358390343,
 				"y": 492.2288461961018
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -66,11 +78,23 @@
 			},
 			"selected": false,
 			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "03b3acfd-fdef-46b0-ad80-50e9d4e00827"
+			},
+			"id": "capsule_aind_generic_quality_control_evaluation_aggregator_3",
+			"position": {
+				"x": 657.5467935995773,
+				"y": 1041.9792673441573
+			},
+			"selected": false,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1761611935816,
+	"timestamp": 1762280733733,
 	"viewport": {
-		"x": -222.1238774621845,
+		"x": 62.89252116974285,
 		"y": -4.783005773440209,
 		"zoom": 0.8705704253911009
 	}
